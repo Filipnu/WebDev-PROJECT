@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feline Future - Register</title>
+    <link rel="stylesheet" href="style/register.css">
+</head>
+<body>
+    <div class="container">
+        <form class="auth-form register-form">
+            <h2>Join Feline Future</h2>
+            <div class="form-group">
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="firstName">First Name</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="middleName" name="middleName">
+                <label for="middleName">Middle Name</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="lastName" name="lastName" required>
+                <label for="lastName">Last Name</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <label for="confirmPassword">Confirm Password</label>
+            </div>
+            <div class="form-group">
+                <input type="date" id="dob" name="dob" required>
+                <label for="dob">Date of Birth</label>
+            </div>
+            <div class="form-group">
+                <select id="pob" name="pob" required>
+                    <option value="">Select Country</option>
+                    <option value="AF">Philippines</option>
+                    <option value="AL">United States</option>
+                    <!-- Add all countries here -->
+                    <option value="ZW">Zimbabwe</option>
+                </select>
+                <label for="pob">Place of Birth</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="address" name="address" required>
+                <label for="address">Address</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="region" name="region" required>
+                <label for="region">Region</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="city" name="city" required>
+                <label for="city">City</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="barangay" name="barangay" required>
+                <label for="barangay">Barangay</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="streetAddress" name="streetAddress" required>
+                <label for="streetAddress">Street Address</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="areaCode" name="areaCode" required>
+                <label for="areaCode">Area Code</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="zipCode" name="zipCode" required>
+                <label for="zipCode">Zip Code</label>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                <label for="phoneNumber">Phone Number</label>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="mobileNumber" name="mobileNumber" required>
+                <label for="mobileNumber">Mobile Number</label>
+            </div>
+            <div class="form-group skills-group">
+                <label>Skills</label>
+                <div class="skills-columns">
+                    <div>
+                        <input type="checkbox" id="skill1" name="skills" value="skill1">
+                        <label for="skill1">Purring</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill2" name="skills" value="skill2">
+                        <label for="skill2">Mouse Catching</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill3" name="skills" value="skill3">
+                        <label for="skill3">Laser Chasing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill4" name="skills" value="skill4">
+                        <label for="skill4">Napping</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill5" name="skills" value="skill5">
+                        <label for="skill5">Grooming</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill6" name="skills" value="skill6">
+                        <label for="skill6">Climbing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill7" name="skills" value="skill7">
+                        <label for="skill7">Meowing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill8" name="skills" value="skill8">
+                        <label for="skill8">Box Sitting</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill9" name="skills" value="skill9">
+                        <label for="skill9">Yarn Playing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="skill10" name="skills" value="skill10">
+                        <label for="skill10">Treat Begging</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="color" id="favoriteColor" name="favoriteColor" value="#000000" required>
+                <label for="favoriteColor">Favorite Color</label>
+            </div>
+            <div class="form-group">
+                <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+                <label for="additionalInfo">Additional Information</label>
+            </div>
+            <button type="submit" class="btn-submit">Register</button>
+            <p class="form-link">Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt kittens</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("../img/mainbg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+
+
+</style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="img/logoAdopt.png" alt="logo"></a>
+        <a class="dvr" href="index.html"><h1 class="dvr">Adopt <span class="aqua-color">Cats</span></h1></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times"onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="adoptcats.html">ADOPT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <main class="main">
+        <h1 class="aqua-color">CATS TO ADOPT</h1>
+        <p>Find your perfect furry companion! We have cats of all ages, sizes, and personalities waiting for their forever homes. Explore the categories below to meet them.</p>
+        
+        <div class="row">
+            <div class="main-col">
+                <h3 class="aqua-color">Kittens</h3>
+                <p>Looking for playful energy and tiny paws? Our kittens are full of curiosity and ready to bring joy to your home.</p>
+                <a class="click-btn" href="#kittens">Click here!</a>
+            </div>s
+            <div class="main-col">
+                <h3 class="aqua-color">Adult Cats</h3>
+                <p>Our adult cats are independent, loving, and come with unique personalities. They’re perfect for families or individuals alike.</p>
+                <a class="click-btn" href="#adults">Click here!</a>
+            </div>
+            <div class="main-col">
+                <h3 class="aqua-color">Senior Cats</h3>
+                <p>Seniors have a lot of love to give and are often overlooked. Consider giving one of our older cats a cozy, loving home.</p>
+                <a class="click-btn" href="#senior">Click here!</a>
+            </div>
+        </div>
+      </main>
+
+    <section class="choose" id="kittens">
+        <h1 class="aqua-color">Adopt Our Kittens!</h1>
+        <p>These kittens are very cute!</p>
+        <div class="row">
+          <div class="campus-col">
+            <img src="img/cat1.jpg" alt="">
+            <div class="layer">
+              <h3>Browny</h3>
+              <p>Am i a cat? <br>meow?</p>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="img/cat2.jpg" alt="">
+            <div class="layer">
+              <h3>Cream</h3>
+              <p>I'm a cat! <br>meow!</p>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="img/cat3.jpg" alt="">
+            <div class="layer">
+                <h3>sniffer</h3>
+                <p>meow meow! <br>meow!</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="choose" id="adults">
+        <h1 class="aqua-color">Adopt Our Adult Cats!</h1>
+        <p>These cats are very energetic!</p>
+        <div class="row">
+          <div class="campus-col">
+            <img src="img/cat1.jpg" alt="">
+            <div class="layer">
+              <h3>Browny</h3>
+              <p>Am i a cat? <br>meow?</p>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="img/cat2.jpg" alt="">
+            <div class="layer">
+              <h3>Cream</h3>
+              <p>I'm a cat! <br>meow!</p>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="img/cat3.jpg" alt="">
+            <div class="layer">
+                <h3>sniffer</h3>
+                <p>meow meow! <br>meow!</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="choose" id="senior">
+        <h1 class="aqua-color">Adopt Our Senior Cats!</h1>
+        <p>These cats are very energetic!</p>
+        <div class="row">
+          <div class="campus-col">
+            <img src="img/cat1.jpg" alt="">
+            <div class="layer">
+              <h3>Browny</h3>
+              <p>Am i a cat? <br>meow?</p>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="img/cat2.jpg" alt="">
+            <div class="layer">
+              <h3>Cream</h3>
+              <p>I'm a cat! <br>meow!</p>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="img/cat3.jpg" alt="">
+            <div class="layer">
+                <h3>sniffer</h3>
+                <p>meow meow! <br>meow!</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <script>
+    
+        var navLinks = document.getElementById("navLinks");
+    
+        function showMenu(){
+          navLinks.style.right = "0";
+        }
+        function hideMenu(){
+          navLinks.style.right = "-200px";
+        }
+    
+      </script>
+</body>
+</html>

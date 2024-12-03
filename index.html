@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt Cats</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head> 
+<body>
+  <header class="header">
+    <nav>
+      <a href="index.html"><img src="img/logoAdopt.png" alt="logo"></a>
+      <a class="dvr" href="index.html"><h1 class="dvr">Adopt <span class="aqua-color">Cats</span></h1></a>
+     <div class="nav-links" id="navLinks">
+      <i class="fa fa-times"onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="adoptcats.html">ADOPT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1>Because Every Cat Deserves a Loving Home</h1>
+      <p>Adopt Cats is a platform dedicated to connecting loving families with cats in need of a home. We make it easy and free to browse, meet, and adopt your next furry friend online. Together, we can give every cat the chance br to find a forever home filled with love and care.</p>
+      <a class="hero-btn" href="adoptcats.html">Adopt Now!</a>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Adopt Cats. All rights reserved. <br> Follow us on social media @AdoptCats</p>
+    </footer>
+</header>
+
+
+
+  <script>
+    
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+
+  </script>
+  
+</body>
+</html>
