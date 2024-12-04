@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .cat-details-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        #cat-image {
+            max-width: 300px;
+            max-height: 300px;
+            margin-right: 30px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .cat-info {
+            max-width: 500px;
+        }
+
+        .cat-info h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .cat-info p {
+            font-size: 1.2em;   
+            margin: 5px 0;
+        }
+
+        .adopt-buttons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .no-btn {
+            background-color: #f44336;
+        }
+
+        .no-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="images/katlogo-modified.png" alt="Logo">
+                <h1>KoolKatsKlub</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="cat-details-container">
+            <img id="cat-image" src="" alt="Cat Image">
+            <div class="cat-info">
+                <h2 id="cat-name">Loading...</h2>
+                <p id="cat-description">Loading description...</p>
+                <p id="cat-price">Loading price...</p>
+
+                <div class="adopt-buttons">
+                    <button class="btn yes-btn" onclick="adoptCat()">Yes, Adopt</button>
+                    <button class="btn no-btn" onclick="noAdopt()">No, Thanks</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Retrieve the cat's identifier from the URL parameter
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat');
+        
+        const catInfo = {
+            dave: {
+                name: "Dave The Magical Cheese Wizard",
+                description: "He likes cheeze and hates non-sorcerer owners.",
+                image: "images/davethemagicalcheesewizard.jpg",
+                price: "$69"
+            },
+            beluga: {
+                name: "Beluga",
+                description: "Currently in need of a master.",
+                image: "images/beluga.jpeg",
+                price: "$50"
+            },
+            galaxy: {
+                name: "Galaxy Destroyer",
+                description: "Pros: Cute looking Kat, Cons: Will destroy your galaxy.",
+                image: "images/GalaxyDestroyer.jpg",
+                price: "$1,000,000,000,000"
+            },
+            elgato: {
+                name: "El-Gato",
+                description: "He stares, he dares, but most importantly, he cares.",
+                image: "images/ElGato.png",
+                price: "$0.25"
+            },
+            warcat: {
+                name: "War Kat",
+                description: "A nameless war veteran.",
+                image: "images/WarCat.jpg",
+                price: "$120"
+            },
+            blurky: {
+                name: "Blurky",
+                description: "Uh...I don't even know anymore -Rollie",
+                image: "images/PukeCat.jpeg",
+                price: "-$50 (we'll pay you to take him)"
+            },
+            sirmeowington: {
+                name: "Sir Meowington Dapplewhiskers",
+                description: "Oh how wise! Please, give us wisdom!",
+                image: "images/OldCat.jpg",
+                price: "$150"
+            },
+            reginald: {
+                name: "Reginald Purrsworth the Noble",
+                description: "Has seen many suns rise and set...",
+                image: "images/dapperman.jpeg",
+                price: "$180"
+            },
+            beerus: {
+                name: "Beerus",
+                description: "Retired. Needs your help.",
+                image: "images/retiredbeerus.jpeg",
+                price: "$0"
+            }
+        };
+        const catDetails = catInfo[cat];
+        if (catDetails) {
+            document.getElementById('cat-name').textContent = catDetails.name;
+            document.getElementById('cat-description').textContent = catDetails.description;
+            document.getElementById('cat-image').src = catDetails.image;
+            document.getElementById('cat-price').textContent = `Price: ${catDetails.price}`;
+        } else {
+            document.getElementById('cat-name').textContent = "Cat not found";
+            document.getElementById('cat-description').textContent = "Sorry, this cat is not available.";
+            document.getElementById('cat-image').style.display = 'none';
+        }
+
+
+        function adoptCat() {
+            window.location.href = "thankyou.html?cat=" + cat;
+        }
+
+        function noAdopt() {
+            window.location.href = "main.html";
+        }
+    </script>
+</body>
+</html>

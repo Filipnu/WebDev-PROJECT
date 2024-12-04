@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../img/mainbg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+        color: #fff;
+    }
+</style>
+<body>
+  <section>
+    <nav>
+        <a href="index.html"><img src="img/logoAdopt.png" alt="logo"></a>
+        <a class="logoName" href="index.html"><h1 class="logoName">Adopt <span class="aqua-color">Cats</span></h1></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times"onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="adoptcats.html">ADOPT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="register.html">SIGN UP</a></li>
+                <li><a href="login.html">LOG IN</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1 class="h1">Contact Us</h1>
+  </section>
+
+  <section class="location">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.0860216593105!2d123.85931071050497!3d10.289975789788288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99c3d0a070e41%3A0x73285dd3d84c0c5!2sUniversity%20of%20San%20Jose-Recoletos%20-%20Basak%20Campus!5e1!3m2!1sen!2sph!4v1733309859593!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="contact-us">
+
+    <div class="row">
+      <div class="contact-col">
+        <div>
+          <i class="fa fa-home"></i>
+          <span>
+            <h5 style="color: #fff;">University of San Jose-Recoletos - Basak Campus</h5>
+            <p style="color: #fff;">Cebu City, 6000 Cebu</p>
+          </span>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <span>
+            <h5 style="color: #fff;">+63 91234567</h5>
+            <p style="color: #fff;">Monday to Saturday, 10am to 6pm</p>
+          </span>
+        </div>
+        <div>
+          <i class="fa fa-envelope-o"></i>
+          <span>
+            <h5 style="color: #fff;">AdoptCats@gmail.com</h5>
+            <p style="color: #fff;">Email us your query</p>
+          </span>
+        </div>
+      </div>
+      <div class="contact-col">
+
+        <form action="form-handler.php" method="post">
+          <input type="text" name="name" placeholder="Enter your Name" required>
+          <input type="email" name="email" placeholder="Enter Email Address" required>
+          <input type="text" name="subject" placeholder="Enter your Subject" required>
+          <textarea rows="8" name="message" placeholder="message" required></textarea>
+          <button type="submit" class="hero-btn black-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <footer >
+    <p style="color: white;">&copy; Copyright 2024 Adopt Cats. All rights reserved. <br> Follow us on social media @AdoptCats</p>
+  </footer>
+</header>
+
+
+
+
+  <script>
+    
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+
+  </script>
+  
+</body>
+</html>

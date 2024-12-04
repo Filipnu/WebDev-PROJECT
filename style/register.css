@@ -1,107 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap');
-
-* {
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Exo 2', sans-serif;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("images/bg.jpg");
-    background-size: cover;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("../img/mainbg.jpg");
+    background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-}
-
-.auth-form {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-.auth-form h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.form-group {
+    background-size: cover;
     position: relative;
-    margin-bottom: 30px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-    transition: border-color 0.2s;
-}
-
-.form-group label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: 0.3s ease all;
-}
-
-.form-group input:focus ~ label,
-.form-group input:valid ~ label,
-.form-group select:focus ~ label,
-.form-group select:valid ~ label,
-.form-group textarea:focus ~ label,
-.form-group textarea:valid ~ label {
-    top: -20px;
-    font-size: 12px;
-    color: #03e9f4;
-}
-
-.btn-submit {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    background: #03e9f4;
-    color: #000;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.btn-submit:hover {
-    background: #fff;
-    color: #03e9f4;
 }
 
 .form-link {
@@ -115,66 +20,82 @@ body {
     text-decoration: none;
 }
 
-.radio-group {
+.container {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
 }
 
-.radio-group label {
-    position: static;
-    font-size: 14px;
-}
-
-.skills-group {
+.container h2 {
+    font-size: 30px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.skills-columns {
+form {
+    text-align: left;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+input[type="color"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #feb47b;
+    transform: translateY(-2px);
+}
+
+.skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin-top: 10px;
 }
 
-.skills-columns div {
-    display: flex;
-    align-items: center;
+textarea {
+    resize: none;
 }
-
-.skills-columns label {
-    position: static;
-    margin-left: 5px;
-    font-size: 14px;
-}
-
-input[type="color"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="color"]::-webkit-color-swatchs-wrapper {
-    padding: 0;
-}
-
-input[type="color"]::-webkit-color-swatch {
-    border: none;
-    border-radius: 50%;
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-
-    .auth-form {
-        padding: 20px;
-    }
-}
-

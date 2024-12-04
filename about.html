@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../img/mainbg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+        color: #fff;
+    }
+</style>
+<body>
+  <section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="img/logoAdopt.png" alt="logo"></a>
+        <a class="logoName" href="index.html"><h1 class="logoName">Adopt <span class="aqua-color">Cats</span></h1></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times"onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="adoptcats.html">ADOPT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="register.html">SIGN UP</a></li>
+                <li><a href="login.html">LOG IN</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1 class="aqua-color">Why Did We Create This Website?</h1>
+
+    <header class="about">
+        <p style="color: white;">We decided to take in really special kats and look for worthy individuals who are brave enough to take up such roles.</p>
+      </header>
+    
+    <div class="video-container">
+        <video width="1000" controls autoplay>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+    </div>
+
+    <h1 class="about-h1">We Rescue and Take Care of Cats</h1>
+    <p style="font-size: 17px; padding: 20px 200px; ">At Adopt Cats, we are dedicated to rescuing and rehabilitating cats in need. Our mission is to provide a safe haven for abandoned, abused, or neglected felines, ensuring they receive the care and love they deserve. We work tirelessly to find loving forever homes for each cat, matching them with families that can provide a nurturing environment. Our team of volunteers and staff is committed to educating the community about responsible pet ownership and the importance of spaying and neutering. We also offer resources and support for new pet owners to help them transition smoothly into their new roles. Through outreach programs, we aim to raise awareness about the plight of homeless cats and promote adoption as a compassionate choice. By fostering a culture of kindness and empathy, we strive to create a better future for all cats in our community. Together, we can make a difference, one paw at a time.</p>
+    <h2>Pancit Canton Provider</h2>
+    <p>No ONE!</p>
+
+    <h2>Who are we?</h2>
+    <p>Secreto</p>
+  
+    <footer>
+      <p>&copy; Copyright 2024 Adopt Cats. All rights reserved. <br> Follow us on social media @AdoptCats</p>
+  </footer>
+  </section>
+  <script>
+    
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+
+  </script>
+  
+</body>
+</html>
